@@ -1,0 +1,121 @@
+<html>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+ <head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="Our.css">
+ </head>
+ <body background="obo.png">
+ 
+<div class="Ramka" > 
+ <div class="page" >
+	
+    <div class="box3" align=center>  
+	<a class="gl" href="index.php" >
+	GrandLibOd.ua</a>
+    </div>
+	<div class="box4">
+		<div class="leftwin">
+			<div class="our_poisk">
+				<form name='F1' method='POST' action='search.php'>
+					<input class="poisk" type='text' name='poisk'>
+					<input class="kn_poisk" type='submit' value='Поиск'>
+				</form>
+			</div>
+	
+			<div class="ganri" align=left>
+				<p class="text">
+				<b>Жанры</b> </p>
+					<ul class="catalogueList">
+					<li>
+                        <a class="silk" onclick=download_ganr('Roman')> <p>Роман</p> </a>
+					</li>
+					<li>
+					<a class="silk" href="Index1en.html"> <p>Военное дело</p> </a>
+					</li>
+					<li>
+					<a class="silk" href="Index1en.html"> <p>Деловая литература</p> </a>
+					</li>
+					<li>
+					<a class="silk" href="Index1en.html"> <p>Детективы и Триллеры</p> </a>
+					</li>
+					<li>
+					<a class="silk" href="Index1en.html"> <p>Детское</p> </a>
+					</li>
+					<li>
+					<a class="silk" href="Index1en.html"> <p>Документальная литература</p> </a>
+					</li>
+					<li>
+					<a class="silk" href="Index1en.html"> <p>Домоводство (Дом и семья)</p> </a>
+					</li>
+					<li>
+					<a class="silk" href="Index1en.html"> <p>Драма</p> </a>
+					</li>
+					<li>
+					<a class="silk" href="Genres.html"> <p>Все жанры</p> </a>
+					</li>
+					</ul>
+				</div>
+			</div>
+		
+		<div class="alfav">
+		<p class="avt"> ПО ФАМИЛИИ АВТОРА: 
+		 <script>
+		 vivod_tuda("АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ");
+		 function vivod_tuda(str){
+		 document.writeln("<table><tr>");
+		 for (i=0;i<str.length;i++){
+		 document.writeln('<td width=14 height=10><a class="silkalf" href="Index1en.html">'+str.charAt(i)+"</a></td>");
+			if (str.charAt(i+1)=="А")
+				document.writeln("</tr><tr>");
+		}	document.writeln("</tr></table>");
+		 }
+		 </script>
+		 </p>
+		 
+		 <p class="avt"> ПО НАЗВАНИЮ КНИГИ:
+		 <script>
+		 vivod_tuda("АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ");
+		 function vivod_tuda(str){
+		 document.writeln("<table><tr>");
+		 for (i=0;i<str.length;i++){
+		 document.writeln('<td width=14 height=10><a class="silkalf" href="Index1en.html">'+str.charAt(i)+"</a></td>");
+			if (str.charAt(i+1)=="А")
+				document.writeln("</tr><tr>");
+		}	document.writeln("</tr></table>");
+		 }
+		 </script>
+		 </p>
+		</div>
+		<div class="rightwin">
+			<form name='F1' method='POST' action='search.php'>
+				<input class="vvod" type='text' name='login' size="20" maxlength="32" placeholder="Логин" onblur="if(this.value=='')this.placeholder='Логин'"> <br><br>
+				<input class="vvod" type='password' name='password' size="20" maxlength="32" placeholder="Пароль" onblur="if(this.value=='')this.placeholder='Пароль'"><br><br>
+				<input class="kn_poisk" type='submit' value='Вход'>
+				<div class="reg"> <a class="reg" href="book_reg.html">Регистрация</a></div>
+			</form>
+		</div>
+		<div class="text2">
+			<p align='center'>Приветствуем Вас на сайте электронной библиотеки GrandLibOd.ua</p>
+<p align="justify">На нашем сайте представлены книги для бесплатного скачивания в 5 электронных форматах: doc, rtf, fb2, html, txt.
+Для удобства пользования библиотекой, имеется "читальный зал", Вы можете читать книги прямо на сайте, не загружая к себе на компьютер. 
+Присутствует функция закладки. Страницу, на которой Вы прерываете чтение, можете сохранить и при следующем посещении сайта 
+продолжить чтение, не теряя времени на её поиск. Все сохраненные книги будут отображаться в блоке "Ваши закладки", 
+который появится в левой части сайта.
+Для поиска интересующей литературы рекомендуем пользоваться поисковиком по сайту, расположенным в верхней левой части страницы. 
+Это самый простой и эффективный способ найти искомое: книгу, автора, серию книг. Если же интересуют книги определенного жанра, 
+посетите эту страницу.
+Если Вы точно не уверены что хотите почитать, воспользуйтесь навигацией по первой букве фамилии автора, названия книги, серии книг, 
+расположенной в верхней части каждой страницы сайта, либо посмотрите отзывы о книгах, опубликованные читателями библиотеки, возможно, 
+вы найдете для себя что-то интересное.</p>
+		</div>
+<script>
+	$.ajax{
+	url:"book_reg.html",
+	type: "POST",}
+</script>
+
+	</div>	
+  </div>
+  </div>
+ </body>
+</html>

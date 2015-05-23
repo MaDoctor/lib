@@ -1,0 +1,31 @@
+AddDefaultCharset utf-8
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html
+Options -Indexes
+<FilesMatch "\.(htm|html|css|js)$">
+AddDefaultCharset UTF-8
+RewriteEngine on
+ErrorDocument 400 /errors/notfound.php
+ErrorDocument 401 /errors/notfound.php
+ErrorDocument 403 /errors/notfound.php
+ErrorDocument 404 check.php
+ErrorDocument 500 /errors/notfound.php
+</FilesMatch>
+
+AddOutputFilterByType DEFLATE text/html text/plain text/xml application/xml application/xhtml+xml text/javascript text/css application/x-javascript
+BrowserMatch ^Mozilla/4 gzip-only-text/html
+BrowserMatch ^Mozilla/4.0[678] no-gzip
+BrowserMatch bMSIE !no-gzip !gzip-only-text/html
+php_value upload_max_filesize 500M
+php_value post_max_size 500M
+php_value max_execution_time 2000
+php_value max_input_time 2000
+
+RewriteEngine on
+ErrorDocument 400 /errors/notfound.php
+ErrorDocument 401 /errors/notfound.php
+ErrorDocument 403 /errors/notfound.php
+ErrorDocument 404 check.php
+ErrorDocument 500 /errors/notfound.php
